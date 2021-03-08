@@ -6,7 +6,7 @@ go get github.com/hajimehoshi/oto
 
 go get github.com/hajimehoshi/go-mp3
 
-##usage and flags
+## usage and flags
 ./pray (defaults to the trisagion)
 
 ./pray --prayer=morning (a morning prayer)
@@ -16,7 +16,7 @@ go get github.com/hajimehoshi/go-mp3
 ./pray --prayer=creed (Christian creed)
 
 
-##todo
+## todo
 add prayers for before/after meals, thanksgiving, etc.
 
 rewrite in holyC
