@@ -16,7 +16,7 @@ go get github.com/hajimehoshi/go-mp3
 ./pray --prayer=creed (Christian creed)
 
 
-## todo
+## To Do
 add prayers for before/after meals, thanksgiving, etc.
 
 rewrite in holyC
