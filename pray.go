@@ -27,6 +27,10 @@ func main() {
 		fmt.Println(night)
 	case "creed":
 		fmt.Println(creed)
+	case "beforemeal":
+		fmt.Println(beforemeal)
+	case "aftermeal":
+		fmt.Println(aftermeal)
 	default:
 		fmt.Println(trisagion)
 	}
@@ -41,21 +45,17 @@ func run() error {
 		return err
 	}
 	defer f.Close()
-
 	d, err := mp3.NewDecoder(f)
 	if err != nil {
 		return err
 	}
-
 	c, err := oto.NewContext(d.SampleRate(), 2, 2, 8192)
 	if err != nil {
 		return err
 	}
 	defer c.Close()
-
 	p := c.NewPlayer()
 	defer p.Close()
-
 	if _, err := io.Copy(p, d); err != nil {
 		return err
 	}
@@ -147,4 +147,24 @@ Glory to the Father, and to the Son, and to the Holy Spirit.
 Be my soul's helper, O God, for I pass through the midst of many snares; deliver me out of them and save me, O Good One, for Thou art the Lover of mankind.
 	
 Into Thy hands, O Lord Jesus Christ, my God, I commend my spirit. Do thou bless me, have mercy on me and grant me eternal life. Amen.`
+
+	aftermeal = `We give thanks to Thee, O Christ our God, that Thou hast satisfied us with Thy earthly blessings; deprive us not also of Thy Heavenly Kingdom.
+As Thou didst come to Thy disciples and didst grant them peace; so come to us and save us, O Savior.
+
+Glory to the Father, and to the Son, and to the Holy Spirit, now and ever and unto ages of ages. Amen.
+
+Lord, have mercy. (3x)
+
+Blessed is God, Who has fed and nourished us with His bountiful gifts by His grace and compassion always, now and ever and unto ages of ages. Amen.`
+
+	beforemeal = `In the name of the Father, and of the Son, and of the Holy Spirit. Amen.
+
+Our Father, Who art in Heaven, hallowed be Thy name. Thy Kingdom come. Thy will be done, on earth as it is in Heaven. Give us this day our daily bread; 
+and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil.
+
+Glory to the Father, and to the Son, and to the Holy Spirit, now and ever and unto ages of ages. Amen.
+
+Lord, have mercy. (3x)
+
+O Christ our God, bless the food, drink, and fellowship of Thy servants, for Thou art holy always, now and ever and unto ages of ages. Amen.`
 )
