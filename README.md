@@ -15,6 +15,9 @@ go get github.com/hajimehoshi/go-mp3
 
 ./pray --prayer=creed (Christian creed)
 
+./pray --prayer=beforemeal (prayer before meal)
+
+./pray --prayer=aftermeal (prayer after meal
 
 ## To Do
 add prayers for before/after meals, thanksgiving, etc.
