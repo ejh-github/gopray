@@ -9,7 +9,7 @@ import (
 
 func main() {
 	var prayer string
-	c := exec.Command("clear")
+	c := exec.Command("play chant.mp3")
 	c.Stdout = os.Stdout
 	c.Run()
 	flag.StringVar(&prayer, "prayer", trisagion, "choice of prayer")
